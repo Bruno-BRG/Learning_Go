@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// binarySearch function takes a sorted array and an item to search for
 func main() {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	index, err := binarySearch(numbers, 3)
@@ -15,6 +16,7 @@ func main() {
 	}
 }
 
+// binarySearch function takes a sorted array and an item to search for
 func binarySearch(numbers []int, item int) (int, error) {
 	low := 0
 	high := len(numbers) - 1
