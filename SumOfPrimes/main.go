@@ -1,31 +1,41 @@
 package main
 
 import (
-   "fmt"
-   "math"
+    "fmt"
 )
 
-func main(){
-	var sum int
-	for i := 0; i <= 2000000; i++{
-		if checkPrimeNumber(i){
-			sum += checkPrimeNumber()
-		}
-	}
-	fmt.Println("Here is the total sum: %i", sum)
+func isPrime(n int) bool {
+    if n <= 1 {
+        return false
+    }
+    if n <= 3 {
+        return true
+    }
+    if n%2 == 0 || n%3 == 0 {
+        return false
+    }
+    i := 5
+    for i*i <= n {
+        if n%i == 0 || n%(i+2) == 0 {
+            return false
+        }
+        i += 6
+    }
+    return true
 }
 
-func checkPrimeNumber(num int) {
-	sum1 := num
-	if num < 2 {
-      fmt.Println("Number must be greater than 2.")
-   }
-   sq_root := int(math.Sqrt(float64(num)))
-   for i:=2; i<=sq_root; i++{
-      if num % i == 0 {
-         fmt.Println("Non Prime Number")
-      }
-   }
-   fmt.Println("Prime Number")
-   return 
+func sumPrimesBelowLimit(limit int) int {
+    sum := 0
+    for i := 2; i < limit; i++ {
+        if isPrime(i) {
+            sum += i
+        }
+    }
+    return sum
+}
+
+func main() {
+    limit := 2000000
+    sum := sumPrimesBelowLimit(limit)
+    fmt.Println("The sum of all primes below two million is:", sum)
 }
