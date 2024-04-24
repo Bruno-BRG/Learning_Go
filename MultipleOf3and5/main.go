@@ -1,11 +1,8 @@
 package main
-
 import "fmt"
-
 func isDivisibleByThreeOrFive(number int) bool {
 	return number%3 == 0 || number%5 == 0
 }
-
 func generateData() []int {
 	var data []int
 	for i := 1; i < 1000; i++ {
@@ -15,7 +12,6 @@ func generateData() []int {
 	}
 	return data
 }
-
 func printData(data []int) int {
 	var sum int
 	for _, number := range data {
@@ -24,7 +20,6 @@ func printData(data []int) int {
 	}
 	return sum
 }
-
 func main() {
 	data := generateData()
 	totalSum := printData(data)
