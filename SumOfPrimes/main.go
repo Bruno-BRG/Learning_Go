@@ -1,9 +1,7 @@
 package main
-
 import (
     "fmt"
 )
-
 func isPrime(n int) bool {
     if n <= 1 {
         return false
@@ -23,7 +21,6 @@ func isPrime(n int) bool {
     }
     return true
 }
-
 func sumPrimesBelowLimit(limit int) int {
     sum := 0
     for i := 2; i < limit; i++ {
@@ -33,7 +30,6 @@ func sumPrimesBelowLimit(limit int) int {
     }
     return sum
 }
-
 func main() {
     limit := 2000000
     sum := sumPrimesBelowLimit(limit)
