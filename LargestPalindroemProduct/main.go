@@ -31,5 +31,5 @@ func findHighestPalindrome() (int, int, int) {
 func main() {
 	maxPalindrome, a, b := findHighestPalindrome()
 	print("Highest Palindrome: ", maxPalindrome)
-	print("Product of: ", a, " and ", b)
+	print(" Product of: ", a, " and ", b)
 }
