@@ -13,13 +13,23 @@ func isPalindrome(x int) bool {
 	return original == rev
 }
 
-func findHighestPalindrome() int {
+func findHighestPalindrome() (int, int, int) {
 	highest := 0
-	for i := 999; i > 99; i--{
-		for j := 999; j > 99; j--{
+	var a, b int
+	for i := 999; i > 99; i-- {
+		for j := 999; j > 99; j-- {
 			if isPalindrome(i*j) && i*j > highest {
-				highest = i*j
+				highest = i * j
+				a = i
+				b = j
 			}
 		}
 	}
+	return highest, a, b
+}
+
+func main() {
+	maxPalindrome, a, b := findHighestPalindrome()
+	print("Highest Palindrome:", maxPalindrome)
+	print("Product of: ", a, "and ", b)
 }
