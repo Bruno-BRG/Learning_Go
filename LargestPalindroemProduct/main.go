@@ -13,4 +13,13 @@ func isPalindrome(x int) bool {
 	return original == rev
 }
 
-func findHighestPalindrome()
+func findHighestPalindrome() int {
+	highest := 0
+	for i := 999; i > 99; i--{
+		for j := 999; j > 99; j--{
+			if isPalindrome(i*j) && i*j > highest {
+				highest = i*j
+			}
+		}
+	}
+}
