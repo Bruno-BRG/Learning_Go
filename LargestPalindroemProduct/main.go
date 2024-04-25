@@ -1,5 +1,17 @@
 package main
 
+import "testing"
+
+func TestFindHighestPalindrome(t *testing.T) {
+	gotMaxPalindrome, gotA, gotB := findHighestPalindrome()
+	// Replace with your expected values
+	wantMaxPalindrome, wantA, wantB := 906609, 993, 913
+
+	if gotMaxPalindrome != wantMaxPalindrome || gotA != wantA || gotB != wantB {
+		t.Errorf("findHighestPalindrome() = %v, %v, %v; want %v, %v, %v", gotMaxPalindrome, gotA, gotB, wantMaxPalindrome, wantA, wantB)
+	}
+}
+
 func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
