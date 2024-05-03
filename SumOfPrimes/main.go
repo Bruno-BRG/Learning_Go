@@ -36,4 +36,4 @@ func main() {
     fmt.Println("The sum of all primes below two million is:", sum)
 }
 
-print("The sum of all primes below two million is:", sumPrimesBelowLimit(200000
+print("The sum of all primes below two million is:", sumPrimesBelowLimit(2000000))
