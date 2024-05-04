@@ -18,7 +18,7 @@ func display(board Board) {
 	// i want the display to have | as the vertial line and - as the horizontal line
 	// i want the display to have the numbers 1, 2, 3 on the top and 1, 2, 3 on the left side
 
-	fmt.Println(" 1  2  3 ")
+	fmt.Println(" 0  1  2 ")
 	for _, row := range board {
 		for _, cell := range row {
 			switch cell {
