@@ -1,3 +1,6 @@
+// Type: Go
+// Description: A simple linear search algorithm in Go
+
 package main
 
 import "fmt"
